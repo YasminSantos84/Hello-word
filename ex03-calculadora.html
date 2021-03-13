@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Solicite ao usuário para informar dois números e um operador
+            matemático. Você usará três prompt(), um para cada número e
+            o terceiro para o operador.
+            Aceite os seguintes operadores:
+            + => adição
+            - => subtração
+            *, X ou x => multiplicação
+            / ou : => divisão
+            Efetue o cálculo apropriado de acordo com o operador informado
+            e informe o resultado usando document.write().
+        */
+
+        let N1 = parseFloat(prompt('Informe o primeiro numero'))
+        let N2 = parseFloat(prompt('Informe o segundo número'))
+        let operador = prompt('Informe o operador da conta + (soma), - (subtração), Xx* (multiplicação) ou :/ (divisão).')
+
+        if(isNaN(N1)||isNaN(N2)){
+            alert('Você deixou de informar um número.')
+        }
+      
+
+        if (operador === '+'){
+            document.write(`${N1} + ${N2} = ${N1 + N2}`)
+        } 
+        else if (operador === '-'){
+            document.write(`${N1} - ${N2} = ${N1 - N2}`)
+        } 
+        else if (operador ==='X'||operador ==='x'||operador ==='*'){
+            document.write(`${N1} X ${N2} = ${N1*N2}`)
+        }
+        else if (operador ===':'||operador ==='/'){
+            document.write(`${N1} : ${N2} = ${N1/N2}`)
+        }
+        else{
+            alert('Operador incorreto')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

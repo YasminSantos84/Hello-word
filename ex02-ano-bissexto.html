@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Peça ao usuário para informar um ano e determine
+            se é bissexto pela regra:
+
+            1) Se o ano divide por 400 é bissexto; *OU*
+            2) se divide por 4 *E* não divide por 100, é bissexto
+
+            Alguns anos para testar:
+            1900: não é
+            1600: bissexto
+            1975: não é
+            1992: bissexto
+            2020: bissexto
+            2000: bissexto
+            2013: não é
+      */
+
+      let numero = parseInt(prompt('Informe um ano maior ou igual a 1582:'))
+
+      if(isNaN(numero)||numero < 1582){ 
+        
+        alert('Desculpe-me, mas isso que você informou não é um ANO VALIDO!!!!!!!!!!!!')
+      }
+      //Ano divisivel por 400 é sempre bissexto
+      if (numero % 400 === 0) {
+        //alert ('O ano' + numero + NÂO é bissexto)
+        //Menssagem usando string template com interpolação de variável
+        //alert(`O ano ${numero} é bissexto`) -------------------------------
+        document.write('O ano é bissexto (divisivel po 400)')
+      }
+      //Se não, o ano pode ainda ser bissexto caso seja divisivel por 4
+      //Mas NÃO seja divisível por 100
+      //Outra forma: else if(numero % 4 === 0 && numero % 100 !== 0)
+      else if(numero % 4 === 0 && !(numero % 100 === 0)){
+        document.write('O ano é bissexto (divisivel por 4 e não por 100)')
+      }
+      else{
+          document.write('Não é bissexto')
+      }
+
+      // Outro exemplo de interpolação de variáveis em string template
+      //let q=5, b=4, c=2
+      //alert('O valor de ' + a + ' somado com ' + b + ' somado com ' + c + ' é igual a ' + (a + b + c))
+      //alert(`O valor de ${​​​​a}​​​​ somado com ${​​​​b}​​​​ somado com ${​​​​c}​​​​ é igual a ${​​​​a + b + c}​​​​`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

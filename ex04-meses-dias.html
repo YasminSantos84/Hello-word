@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Solicite ao usuário que informe o número correspondente a um
+            mês, na faixa entre 1 e 12.
+
+            Usando a estrutura switch..case, informe de volta ao usuário quantos
+            dias possui o mês informado, conforme segue:
+
+            * JANEIRO, MARÇO, MAIO, JULHO, AGOSTO, OUTUBRO e DEZEMBRO: 31 dias
+            * ABRIL, JUNHO, SETEMBRO e NOVEMBRO: 30 dias
+            * FEVEREIRO: 28 ou 29 dias (em anos bissextos)
+        */
+
+        let mes = parseInt(prompt('Informe um número correspondente a um mês (1 a 12).'))
+
+        if(isNaN(mes)){
+            alert('Você deixou de informar o mês como um número')
+        }
+        else{
+            switch(mes){
+                case 1:
+                    document.write(`O mês de janeiro tem 31 dias.`)
+                    document.write('Feiz ano novo!')
+                    break
+                case 2:
+                    document.write(`O mês de fevereiro tem 28 dias, verifique se o ano é bissexto para descartar a hipótese dele ter 29.`)
+                    document.write('Feliz carnaval!')
+                    break
+                case 3:
+                    document.write(`O mês de março tem 31 dias.`)
+                    document.write('Feliz dia das mulheres!')
+                    break
+                case 4:
+                    document.write(`O mês de abril tem 30 dias.`)
+                    document.write('Feliz páscoa!')
+                    break
+                case 5:
+                    document.write(`O mês de maio tem 31 dias.`)
+                    document.write('Viva a el cinco de maio!')
+                    break
+                case 6:
+                    document.write(`O mês de junho tem 30 dias.`)
+                    document.write('Feliz dia de São joão!')
+                    break
+                case 7:
+                    document.write(`O mês de julho tem 31 dias.`)
+                    document.write('Continue na festa junina!')
+                    break
+                case 8:
+                    document.write(`O mês de agosto tem 31 dias.`)
+                    document.write('O mês mais longo do ano.')
+                    break
+                case 9:
+                    document.write(`O mês de setembro tem 30 dias.`)
+                    document.write('Feliz dia da indenpendência!')
+                    break
+                case 10:
+                    document.write(`O mês de outubro tem 31 dias.`)
+                    document.write('Feliz dia das crianças!')
+                    break
+                case 11:
+                    document.write(`O mês de novembro tem 30 dias.`)
+                    document.write('Feliz dia da consciência negra!')
+                    break
+                case 12:
+                    document.write(`O mês de dezembro tem 31 dias.`)
+                    document.write('Feliz dia de natal e um próspero ano novo!')
+                    break
+                default:
+                    alert('ERRO recarregue a página e tente novamente.')
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

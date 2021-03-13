@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 1</title>
+        <script>
+            //'use strict'impede que variáveis sejam declaradas
+            //sem o uso de let, ar ou const
+            //Inicialzar variáveis diretamente é má prática de programação
+            'use strict'
+            /*
+                Peça ao usuário para informar um número, usando
+                prompt().Determine se o número digitado é par 
+                ou impar e informe ao usuário usando alert().
+            */
+            //parseInt(): tenta converter a entrada em um número válido
+            //e retorna NaN se não conseguir
+            let numero = parseInt(prompt('Informe um número:'))
+            //Testando se é realmente um número
+            if(isNaN(numero)){ //Conversão do parse Int() falhou
+                alert('Desculpe-me, mas isso que você informou não é um número!!!!!!!!!!!!!')
+            }
+            //Verificando se o resto da divisão do número por 2 deu 0
+            if(numero%2===0){
+                alert ('Número PAR.')
+            }
+            else{
+                alert('Número IMPAR.')
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
