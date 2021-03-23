@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            
+            Peça ao usuário para informar dois números inteiros diferentes.
+            Use do..while para garantir que os números sejam válidos e diferentes
+            entre si.
+            
+            Utilizando um loop for, calcule a somatória de todos os números entre 
+            os dois valores informados (inclusive).            
+        */
+
+        let N1, N2, maior, menor
+
+
+        do{
+            N1= parseInt(prompt('Informe o valor 1:'))
+            N2= parseInt(prompt('Informe o valor 2:'))
+        }while(isNaN(N1)||isNaN(N2)||N1===N2)
+
+        if(N1<N2){
+            menor=N1
+            maior=N2
+        }
+        else{
+            menor=N2
+            maior=N1
+        }
+        document.write(`As somas dos números ${N1} e ${N2} são respectivamente:`) 
+        let soma = 0
+        for(let i= menor; i<=maior; i+=1){
+            soma=soma+i;      
+                document.write(`=${soma}`)
+                
+         }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
