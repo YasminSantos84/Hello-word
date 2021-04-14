@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais por KM em 2099</title>
+    <script>
+        'use strict'
+        // Estações de embarque e desembarque
+        function EmbDesemb(estacao){
+            let num
+            num=400
+            for (let km=1;km<=num;km++){
+                if(km%50 === 0){
+                document.write(`No km ${km} há uma estação de embarque e desembarque.<br>`)
+                }
+            }
+        }
+
+        //Número recebido pelo usuário
+
+        let num
+        do{
+        num= parseInt(prompt("Informe um número entre 1 e 400:"))
+        } while(num<1||num>400||isNaN(num))
+    
+        //Comodidades por KM
+        switch(num){
+            case 50:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 100:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 150:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 200:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 250:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 300:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 350:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 400:
+                alert("Este quilometro tem uma estação de embarque e desembarque")
+            break
+            case 356:
+                alert("O acqua park está neste km")
+            break
+            case 311:
+                alert("Boleli Shopping center está neste km")
+            break
+            case 204:
+                alert("Hotel Cacique Internacional 6 estrelas está neste km")
+            break
+            case 137:
+                alert("Aeroporto Interplanetário de Virapratos está neste km")
+            break
+            case 155:
+                alert("Posto de polícia Ferroviária está neste km")
+            break
+            case 355:
+                alert("Posto de polícia Ferroviária está neste km")
+            break
+            case 98:
+                alert("Posto de convenniência da Rede Mil Grau está neste km")
+            break
+            case 190:
+                alert("Posto de convenniência da Rede Mil Grau está neste km")
+            break
+            case 283:
+                alert("Posto de convenniência da Rede Mil Grau está neste km")
+            break
+            case 379:
+                alert("Posto de convenniência da Rede Mil Grau está neste km")
+            break
+            default:
+                alert('Nada aqui')
+        }
+        
+        //Chamada funçã 2)
+        EmbDesemb(num)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
