@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+    <script>
+        'use strict'  
+        
+        /*
+        
+            O ano é 2119. A prefeita Enza Valentina Faleiros Trajano 
+            Bittar da Silva inaugura a primeira linha do Metrô de Franca, 
+            no sentido norte-sul, com as seguintes estações: Santa Teresinha,
+            Estação, Centro, Jardim Lima e Aeroporto I.
+            
+            1) Crie um vetor vazio e depois insira as estações no vetor. X
+            
+            Faça um loop for TRADICIONAL para exibir as estações e depois passe um traço horizontal (<hr>).X
+                
+            No ano seguinte, a linha foi expandida com a inauguração
+            das estações City Petrópolis, no extremo norte, e Aeroporto IV, no extremo sul.X
+            
+            2) Insira as novas estações no vetor nas posições apropriadas.X
+
+            Já em 2125, foi criada a estação Vila Imperador, entre
+            as estações Santa Teresinha e Estação, para atender à grande
+            demanda da maior universidade da cidade, a Fatec de Franca.X
+            
+            Um ano depois, a estação Jardim Alvorada passou a funcionar
+            entre as estações Jardim Lima e Aeroporto I.X
+            
+            3) Insira as novas estações no vetor nas posições apropriadas.X
+
+            Faça um loop for TRADICIONAL EM SENTIDO INVERSO para exibir as estações e depois passe um traço horizontal (<hr>).X
+                
+            Em 2130, a estação Centro foi desativada, 
+            e em seu lugar duas novas estações entraram em funcionamento: as estações 9 de Julho e Champagnat.X
+            
+            4) Modifique o vetor de acordo com as alterações.X
+            
+            Faça um loop for TRADICIONAL para exibir as estações e depois passe um traço horizontal (<hr>).X
+                
+            Em 2133, no entanto, Franca entrou em guerra com os restinguenses, que invadiram e destruíram as duas estações mais ao sul do metrô de Franca. X
+            Neste mesmo ano, em meio à crise, foi fechada a estação Santa Teresinha.X
+            
+            5) Modifique o vetor de acordo com as alterações.X
+            
+            Faça um loop FOR...OF para exibir as estações e depois passe um traço horizontal (<hr>).X       
+        */
+        let vazio=[]
+        vazio.push('Santa Terezinha','Estação','Centro','Jardim Lima','Aeroporto I')
+        document.write('1-Estações de metro do item 1:'+vazio+'<br>')
+
+        //Item 1
+        for(let i = 0; i < vazio.length; i++) {
+            document.write(vazio[i] + '<br>')
+        }
+        document.write('<hr>')
+//===================================================================
+        vazio.unshift('City Petrópolis')
+        vazio.push('Aeroporto IV')
+
+        document.write('2-Estações de metro do item 2:'+vazio+'<br>')
+
+        for(let elemento of vazio){
+            document.write(elemento+'<br>')
+        }
+        document.write('<hr>')
+//====================================================================  
+
+        vazio.splice(2,0,'Vila Imperador')
+        vazio.splice(6,0,'Jardim Alvorada')
+
+        document.write('3-Estações de metro do item 3:'+vazio+'<br>')
+
+        for(let i = vazio.length - 1; i >=0; i--){
+            document.write(vazio[i]+'<br>')
+        }
+        document.write('<hr>')
+
+//====================================================================
+
+        vazio.splice(4,1,'9 de Julho', 'Champagnat')
+
+        document.write('4-Estações de metro do item 4:'+vazio+'<br>')
+
+        for(let i = 0; i < vazio.length; i++){
+            document.write(vazio[i]+'<br>')
+        }
+        document.write('<hr>')
+//====================================================================
+        let retirado = vazio.pop()
+
+        retirado = vazio.splice(-1,1)
+
+        retirado = vazio.splice(1,1)
+
+        document.write('5-Estações de metro do item 5:'+vazio+'<br>')
+
+        for(let elemento of vazio){
+            document.write(elemento+'<br>')
+        }
+        document.write('<hr>')
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
