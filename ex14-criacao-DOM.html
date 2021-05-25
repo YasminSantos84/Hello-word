@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação DOM HTML</title>
+   
+</head>
+<body>
+    <h1>Criação de novos elementos</h1>
+    <ol>
+
+    </ol>
+
+     <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é uma prática de
+        // programação
+        'use strict'
+    
+            //Todos os elementos devem ser inseridos usando JavaScript.
+            
+            //1) Insira três itens na lista ordenada, com os valores "Belarmina", "Luzinete" e "Roberval".
+ 
+                const NovoItem = document.createElement('li')
+                NovoItem.textContent = 'Belarmina'
+
+                const lista = document.querySelector('ol')
+                lista.appendChild(NovoItem)
+
+                const NovoItem2 = document.createElement('li')
+                NovoItem2.textContent = 'Luzinete'
+                lista.appendChild(NovoItem2)
+                
+                const NovoItem3 = document.createElement('li')
+                NovoItem3.textContent = 'Roberval'
+                lista.appendChild(NovoItem3)             
+
+            //2) Insira na lista os itens "Adamastor", "Ildefonso", "Querência" e "Turíbio", mantendo a ordem alfabética.
+
+                const NovoItem4 = document.createElement('li')
+                NovoItem4.textContent = 'Adamastor'
+                lista.insertBefore(NovoItem4, NovoItem)
+
+                const NovoItem5 = document.createElement('li')
+                NovoItem5.textContent = 'Ildefonso'
+                lista.insertBefore(NovoItem5, NovoItem2)
+
+                const NovoItem6 = document.createElement('li')
+                NovoItem6.textContent = 'Querência'
+                lista.insertBefore(NovoItem6, NovoItem3)
+
+                const NovoItem7 = document.createElement('li')
+                NovoItem7.textContent = 'Turíbio'
+                lista.appendChild(NovoItem7)
+        
+            //3) Insira um título de nível 2 logo abaixo do título de nível 1, com o texto "Lista de candidatos".     
+
+                const TextH2 = document.createElement('h2')
+                TextH2.textContent = 'Lista de candidatos.'
+                document.body.insertBefore(TextH2, lista)
+        
+            //4) Insira um parágrafo abaixo da lista ordenada, com o texto "Irão para o segundo turno os dois candidatos mais votados".
+
+                const NovoParag = document.createElement('p')
+                NovoParag.textContent = "Irão para o segundo turno os dois candidatos mais votados."
+                document.body.appendChild(NovoParag)       
+            
+    </script>
+</body>
+</html>
